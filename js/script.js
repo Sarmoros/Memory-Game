@@ -7,26 +7,25 @@ for (var i=0; i<emojis.length; i++) {
     box.innerHTML = shuf_emojis[i];
 
     box.onclick = function() {
-        this.classList.add('flipped'); 
+        this.classList.add('boxOpen')
         setTimeout(function() {
-            if (document.querySelectorAll('.flipped').length > 1){
-                if (document.querySelectorAll('.flipped')[0].innerHTML == document.querySelectorAll('.flipped')[1].innerHTML){
-                    document.querySelectorAll('.flipped')[0].classList.add('boxMatch')
-                    document.querySelectorAll('.flipped')[1].classList.add('boxMatch')
+            if(document.querySelectorAll('.boxOpen').length > 1){
+                if(document.querySelectorAll('.boxOpen')[0].innerHTML == document.querySelectorAll('.boxOpen')[1].innerHTML){
+                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
+                    document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
 
-                    document.querySelectorAll('.flipped')[1].classList.remove('flipped')
-                    document.querySelectorAll('.flipped')[0].classList.remove('flipped')
+                    document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+                    document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
                     
-                    if (document.querySelectorAll('.boxMatch').length == emojis.length){
+                    if(document.querySelectorAll('.boxMatch').length == emojis.length){
                         alert('You win!')
-                    } 
+                    }
                 } else {
-                    document.querySelectorAll('.flipped')[1].classList.remove('flipped')
-                    document.querySelectorAll('.flipped')[0].classList.remove('flipped')
+                    document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+                    document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
                     }
                 }
         },500)
     }
-
     document.querySelector('.game').appendChild(box);
 }

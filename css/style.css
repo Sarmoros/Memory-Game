@@ -71,7 +71,7 @@ h2 {
     transition: 0.25s;
 }
 
-.item.flipped {
+.boxOpen {
     transform: rotateY(0deg);
 }
 
@@ -85,6 +85,6 @@ h2 {
     backface-visibility: hidden;
 }
 
-.flipped:after, .boxMatched:after {
+.boxOpen::after, .boxMatch::after {
     transform: rotateY(180deg);
 }
