@@ -80,12 +80,11 @@ h2 {
     position: absolute;
     inset: 0;
     background: #d7b8de;
-    /* opacity: 0.85; */
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
 }
 
-.flipped:after {
+.flipped:after, .boxMatched:after {
     transform: rotateY(180deg);
 }
