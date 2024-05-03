@@ -13,6 +13,6 @@ Consists of 16 boxes, when one box is clicked it will flip to reveal the emoji, 
 - VScode
 
 ## Link to Website
-
+https://sarmoros.github.io/Memory-Game/
 
 
